@@ -1,3 +1,5 @@
+
+
 <header>
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
@@ -12,12 +14,12 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                     @if (Auth::check())
-                      <li>
+                    @if (Auth::check())
+                        <li>
                             <a href="{{ route('items.create') }}">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                 アイテムを追加
-                              </a>
+                            </a>
                         </li>
 
                         <li class="dropdown">
@@ -39,8 +41,9 @@
                             </ul>
                         </li>
                     @else
-                    <li><a href="{{ route('signup.get') }}">新規登録</a></li>
-                    <li><a href="#">ログイン</a></li>
+                        <li><a href="{{ route('signup.get') }}">新規登録</a></li>
+                        <li><a href="{{ route('login') }}">ログイン</a></li>
+                    @endif
                 </ul>
             </div>
         </div>
